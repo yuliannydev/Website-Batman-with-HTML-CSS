@@ -86,16 +86,16 @@ article p {
 }
 
 .images ul {
-    list-style-type: none;
+    display: inline-block;
 }
 
 .images li {
     display: inline-block;
-    width: 100%;
+    width: 45%;
 }
 
 .images li img {
-    max-width: 80%;
+    max-width: 70%;
 }
 
 .join {
@@ -167,5 +167,15 @@ form input:valid {
     }
     nav {
         top: 60px;
+    }
+
+    .images ul {
+        display: block;
+    }
+   
+    .images li {
+        padding: 5px;
+        display: inline-block;
+        width: 100%;
     }
 }
