@@ -36,6 +36,7 @@ nav {
     padding: 20px;
     position: sticky;
     top: 70px;
+    text-align: center;
 }
 
 .join-nav {
@@ -94,7 +95,7 @@ article p {
 }
 
 .images li img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .join {
@@ -139,4 +140,32 @@ nav li a:hover {
 
 form input:valid {
     border: 4px solid #71d300;
+}
+
+/* MEDIA QUERY, RESPONSIVE STYLES */
+
+@media screen and (max-width: 1400px) {
+    
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+    nav li {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width:  560px) {
+    nav li {
+        font-size: 1.3rem;
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+
+    }
+    .banner img {
+        padding-top: 70px;
+    }
+    nav {
+        top: 60px;
+    }
 }
