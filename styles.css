@@ -8,7 +8,6 @@ body, ul, li, h1, h2, a {
 header {
     background-color: #991010;
     position: fixed;
-    width: 100%;
     padding: 10px;
     text-align: center;
     z-index: 1;
@@ -163,7 +162,7 @@ form input:valid {
 
     }
     .banner img {
-        padding-top: 70px;
+        padding-top: 100px;
     }
     nav {
         top: 60px;
