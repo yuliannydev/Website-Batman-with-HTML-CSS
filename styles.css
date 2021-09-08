@@ -8,8 +8,8 @@ body, ul, li, h1, h2, a {
 header {
     background-color: #991010;
     position: fixed;
-    width: 100%;
-    padding: 10px;
+    /* width: 100%; */
+    padding: 15px;
     text-align: center;
     z-index: 1;
     left: 0;
@@ -19,7 +19,7 @@ header {
 header h1 {
     color: yellow;
     border: 4px solid yellow;
-    padding: 6px 12px;
+    padding: 4px 12px;
     display: inline-block;
     text-shadow: 1px 1px black;
 }
@@ -33,10 +33,11 @@ header h1 {
 
 nav {
     background-color: #F4F4F4;
-    padding: 20px;
+    padding: 15px;
     position: sticky;
-    top: 70px;
+    top: 92px;
     text-align: center;
+    z-index: 1;
 }
 
 .join-nav {
@@ -77,25 +78,8 @@ article h2 {
 }
 
 article p {
-    text-align: justify; 
-}
-
-.images {
-    text-align: center;
-    margin: 50px auto;
-}
-
-.images ul {
-    display: inline-block;
-}
-
-.images li {
-    display: inline-block;
-    width: 45%;
-}
-
-.images li img {
-    max-width: 70%;
+    text-align: justify;
+    font-size: 1.2rem;
 }
 
 .join {
@@ -142,6 +126,65 @@ form input:valid {
     border: 4px solid #71d300;
 }
 
+
+/* CONTAINER TEST */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.container .card .face.face1 .content img {
+    width: 340px;
+    height: 390px;
+}
+
+.container .card {
+    position: relative;
+
+}
+
+.container .card .face {
+    padding: 50px 0;
+    width: 320px;
+    height: 250px;
+    transition: 0.3s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    transform: translateY(170px);
+
+}
+
+.container .card:hover .face.face1 {
+    transform: translateX(0);
+}
+
+.container .card .face.face1 .content {
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content {
+    opacity: 1;
+}
+
+.container .card .face.face2 .content {
+    margin: -40px 0;
+    text-align: justify;
+}
+
+.container .card .face.face2 .content p {
+    margin: 35px 0;
+}
+
 /* MEDIA QUERY, RESPONSIVE STYLES */
 
 @media screen and (max-width: 1400px) {
@@ -149,12 +192,33 @@ form input:valid {
     h1, h2 {
         font-size: 1.8rem;
     }
+    nav {
+        top: 88px;
+    }
     nav li {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+    }
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container .card .face {
+        width: 310px;
+        height: 200px;
+        transition: 0.3s;
+        padding: 60px 0;
     }
 }
 
 @media screen and (max-width:  560px) {
+    
+    header {
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+    }
     nav li {
         font-size: 1.3rem;
         display: block;
@@ -166,16 +230,27 @@ form input:valid {
         padding-top: 70px;
     }
     nav {
-        top: 60px;
+        top: 130px;
     }
-
-    .images ul {
-        display: block;
+    .container  {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
     }
-   
-    .images li {
-        padding: 5px;
-        display: inline-block;
-        width: 100%;
+    .container .card .face {
+    width: 250px;
+    height: 190px;
+    transition: 0.3s;
+    padding: 15px 0;
     }
+    .container .card .face.face1 .content img{
+        width: 250px;
+        height: 300px;
+        padding: 0;
+    }
+   .container .card:hover .face.face2 .content p {
+    padding: 45px 0;
+   }
 }
