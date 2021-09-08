@@ -187,7 +187,7 @@ form input:valid {
 /* MEDIA QUERY, RESPONSIVE STYLES */
 
 @media screen and (max-width: 1400px) {
-    
+
     h1, h2 {
         font-size: 1.8rem;
     }
@@ -210,7 +210,11 @@ form input:valid {
         padding: 60px 0;
     }
 }
-
+@media screen and (max-width: 768px) {
+    nav li {
+        font-size: 1.5rem;
+    }
+}
 @media screen and (max-width:  560px) {
     
     header {
@@ -226,7 +230,7 @@ form input:valid {
 
     }
     .banner img {
-        padding-top: 100px;
+        padding-top: 105px;
     }
     nav {
         top: 130px;
@@ -252,4 +256,22 @@ form input:valid {
    .container .card:hover .face.face2 .content p {
     padding: 45px 0;
    }
+}
+
+@media screen and (max-width:  414px) {
+    .banner img {
+        padding-top: 80px;
+    }
+    nav {
+        top: 85px;
+    }
+}
+@media screen and (max-width:  375px) {
+    
+    .banner img {
+        padding-top: 105px;
+    }
+    nav {
+        top: 130px;
+    }
 }
